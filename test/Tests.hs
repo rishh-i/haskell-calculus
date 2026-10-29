@@ -107,7 +107,7 @@ diffTests = [ diff "x" e1 --> 5 * 1 + 0 * Id "x"
                             / (3 * (Id "x" * Id "x") + 2)
             , diff "x" (exp (Id "x")) --> exp (Id "x")
             , diff "x" (exp (Id "x" ^ 2)) -->
-                (Id "x" + Id "x") * exp (Id "x" ^ 2)
+                (Id "x" * 1 + 1 * Id "x") * exp (Id "x" ^ 2)
             ]
 
 maclaurinTests :: [Assertion]
