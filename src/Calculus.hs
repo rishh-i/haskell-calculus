@@ -123,8 +123,8 @@ diff x (Bin Div e1 e2) =  a/b
 diff x (Pre Neg e) = negate (diff x e)
 diff x (Pre Sin e) = (cos e) * (diff x e)
 diff x (Pre Cos e) = -(sin e) * (diff x e)
-diff x (Pre Log e) = (1/e) * (diff x e)
-diff x (Pre Exp e) = (exp e) * (diff x e)
+diff x (Pre Log e) = (diff x e)/e
+diff x (Pre Exp e) = (diff x e) * (exp e)
 
 {-|
 Computes the approximation of an expression `f` by expanding the Maclaurin
